@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgActivityType"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/run"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblActivityType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/alike"
+        android:text="run/intervals"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/imgActivityType"
+        app:layout_constraintTop_toTopOf="@+id/imgActivityType"
+        app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
+
+    <ImageView
+        android:id="@+id/imgActivityAltitude"
+        android:layout_width="25dp"
+        android:layout_height="15dp"
+        android:src="@drawable/floors"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toEndOf="@id/lblActivityType"
+        app:layout_constraintTop_toTopOf="@+id/imgActivityType"
+        app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
+
+    <TextView
+        android:id="@+id/lblActivityAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alike"
+        android:text="115m"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imgActivityAltitude"
+        app:layout_constraintTop_toTopOf="@+id/imgActivityType"
+        app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
+
+    <ImageView
+        android:id="@+id/imgActivityHR"
+        android:layout_width="25dp"
+        android:layout_height="15dp"
+        android:src="@drawable/heart"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toEndOf="@id/lblActivityAltitude"
+        app:layout_constraintTop_toTopOf="@+id/imgActivityType"
+        app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
+
+    <TextView
+        android:id="@+id/lblActivityHR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alike"
+        android:text="154"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imgActivityHR"
+        app:layout_constraintTop_toTopOf="@+id/imgActivityType"
+        app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
+
+    <TextView
+        android:id="@+id/lblActivityDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alike"
+        android:text="[15.5 km]"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toEndOf="@+id/lblActivityHR"
+        app:layout_constraintTop_toTopOf="@+id/imgActivityType"
+        app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
+
+    <TextView
+        android:id="@+id/lblActivityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/courgette"
+        android:text="10 * 2min@Z5 / 2min@Z1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgActivityType" />
+
+    <TextView
+        android:id="@+id/lblActivityWork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/alike"
+        android:text="[15.5 km | 0:20:00 | pace 3:38 | HR 162 | alt 1538 | 174 spm"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblActivityName" />
+
+    <TextView
+        android:id="@+id/lblActivityDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/alike"
+        android:text="Description of this run"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblActivityWork" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

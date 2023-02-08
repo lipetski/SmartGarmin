@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SmartGarmin</string>
+    <string name="month_underline_minus"><u>M-</u></string>
+    <string name="year_underline_minus"><u>Y-</u></string>
+    <string name="month_underline_plus"><u>M+</u></string>
+    <string name="year_underline_plus"><u>Y+</u></string>
+</resources>
