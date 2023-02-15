@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'at.co.shaman.smartgarmin'
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "at.co.shaman.smartgarmin"
         minSdk 26
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 

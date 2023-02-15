@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/alegreya_sc</item>
         <item>@font/alike</item>
         <item>@font/almendra</item>
         <item>@font/amarante</item>
@@ -13,6 +14,9 @@
         <item>@font/cherry_swash</item>
         <item>@font/comic_neue_light</item>
         <item>@font/coming_soon</item>
+        <item>@font/cormorant_infant_italic</item>
         <item>@font/courgette</item>
+        <item>@font/economica_italic</item>
+        <item>@font/ibarra_real_nova</item>
     </array>
 </resources>

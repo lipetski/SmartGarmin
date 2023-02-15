@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".one_day">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/layoutNested"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.25" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineStat1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.3" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineStat2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.475" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineStat3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.65" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineStat4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.825" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.50" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.625" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline75"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.75" />
+
+
+
+                <TextView
+                    android:id="@+id/lblGeneral"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="General"
+                    android:background="@color/header"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lblGeneralAvg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/alike"
+                    android:text="7 days"
+                    android:gravity="right"
+                    android:background="@color/header"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/lblGeneral"
+                    app:layout_constraintStart_toStartOf="@id/guideline75"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgSleepText"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/bed"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblGeneral" />
+
+                <TextView
+                    android:id="@+id/lblSleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7:53"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guideline25"
+                    app:layout_constraintEnd_toStartOf="@id/guideline50"
+                    app:layout_constraintBottom_toBottomOf="@id/imgSleepText"
+                    app:layout_constraintTop_toTopOf="@id/imgSleepText" />
+
+                <TextView
+                    android:id="@+id/lblSleepDeep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="deep 0:40"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guideline50"
+                    app:layout_constraintEnd_toStartOf="@id/guideline75"
+                    app:layout_constraintBottom_toBottomOf="@id/imgSleepText"
+                    app:layout_constraintTop_toTopOf="@id/imgSleepText" />
+
+                <TextView
+                    android:id="@+id/lblSleepAvg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8:05"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guideline75"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imgSleepText"
+                    app:layout_constraintTop_toTopOf="@id/imgSleepText" />
+
+                <ImageView
+                    android:id="@+id/imgRestHR"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/heart"
+                    android:layout_marginLeft="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgSleepText" />
+
+                <TextView
+                    android:id="@+id/lblRestHR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="61"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guideline25"
+                    app:layout_constraintEnd_toStartOf="@id/guideline50"
+                    app:layout_constraintBottom_toBottomOf="@id/imgRestHR"
+                    app:layout_constraintTop_toTopOf="@id/imgRestHR" />
+
+                <TextView
+                    android:id="@+id/lblRestHRRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[53 .. 140]"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guideline50"
+                    app:layout_constraintEnd_toStartOf="@id/guideline75"
+                    app:layout_constraintBottom_toBottomOf="@id/imgRestHR"
+                    app:layout_constraintTop_toTopOf="@id/imgRestHR" />
+
+                <TextView
+                    android:id="@+id/lblRestHRAvg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="58"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guideline75"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imgRestHR"
+                    app:layout_constraintTop_toTopOf="@id/imgRestHR" />
+
+                <ImageView
+                    android:id="@+id/imgSteps"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/steps"
+                    android:layout_marginLeft="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgRestHR" />
+
+                <TextView
+                    android:id="@+id/lblSteps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8160"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guideline25"
+                    app:layout_constraintEnd_toStartOf="@id/guideline50"
+                    app:layout_constraintBottom_toBottomOf="@id/imgSteps"
+                    app:layout_constraintTop_toTopOf="@id/imgSteps" />
+
+                <TextView
+                    android:id="@+id/lblFloors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintEnd_toStartOf="@id/guideline62"
+                    app:layout_constraintBottom_toBottomOf="@id/imgSteps"
+                    app:layout_constraintTop_toTopOf="@id/imgSteps" />
+
+                <ImageView
+                    android:id="@+id/imgFloors"
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/floors"
+                    android:layout_marginLeft="0dp"
+                    app:layout_constraintStart_toStartOf="@id/guideline62"
+                    app:layout_constraintTop_toTopOf="@id/imgSteps"
+                    app:layout_constraintBottom_toBottomOf="@id/imgSteps" />
+
+                <TextView
+                    android:id="@+id/Steps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17201"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guideline75"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imgSteps"
+                    app:layout_constraintTop_toTopOf="@id/imgSteps" />
+
+                <TextView
+                    android:id="@+id/lblHealthyTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Health:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgSteps" />
+
+                <TextView
+                    android:id="@+id/lblHealthy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="yes (1 pillow)"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guideline25"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgSteps"
+                    app:layout_constraintTop_toTopOf="@id/lblHealthyTxt" />
+
+                <TextView
+                    android:id="@+id/lblActivities"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@color/header"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Activities"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblHealthy" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lstActivities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/lblActivities"
+                    tools:layout_editor_absoluteX="33dp" />
+
+                <TextView
+                    android:id="@+id/lblRunning"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Running"
+                    android:layout_marginTop="14dp"
+                    android:background="@color/header"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lstActivities" />
+
+                <TextView
+                    android:id="@+id/lblRunningDistTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/alike"
+                    android:text="dist, km"
+                    android:background="@color/header"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/lblRunning"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat1"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat2" />
+
+                <TextView
+                    android:id="@+id/lblRunningAltTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/alike"
+                    android:text="alt, m"
+                    android:background="@color/header"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/lblRunning"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat2"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat3" />
+
+                <TextView
+                    android:id="@+id/lblRunningTimeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/alike"
+                    android:text="time"
+                    android:background="@color/header"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/lblRunning"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat3"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat4" />
+
+                <TextView
+                    android:id="@+id/lblRunningRunsTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/alike"
+                    android:text="runs"
+                    android:background="@color/header"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/lblRunning"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat4"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/lbl30DaysText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="30 days:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblRunning" />
+
+                <TextView
+                    android:id="@+id/lbl30DaysDist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alike"
+                    android:text="165.4"
+                    android:textColor="@color/black"
+
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat2"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat1"
+                    app:layout_constraintTop_toTopOf="@id/lbl30DaysText" />
+
+                <TextView
+                    android:id="@+id/lbl30DaysAlt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="82"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat2"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat3"
+                    app:layout_constraintTop_toTopOf="@id/lbl30DaysText" />
+
+                <TextView
+                    android:id="@+id/lbl30DaysTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15:25"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat3"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat4"
+                    app:layout_constraintTop_toTopOf="@id/lbl30DaysText" />
+
+                <TextView
+                    android:id="@+id/lbl30DaysRuns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/lbl30DaysText" />
+
+                <TextView
+                    android:id="@+id/lblThisWeekText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="This week:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lbl30DaysText" />
+
+                <TextView
+                    android:id="@+id/lblThisWeekDist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alike"
+                    android:text="73.4"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat2"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat1"
+                    app:layout_constraintTop_toTopOf="@id/lblThisWeekText" />
+
+                <TextView
+                    android:id="@+id/lblThisWeekAlt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="43"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat2"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat3"
+                    app:layout_constraintTop_toTopOf="@id/lblThisWeekText" />
+
+                <TextView
+                    android:id="@+id/lblThisWeekTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7:24"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat3"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat4"
+                    app:layout_constraintTop_toTopOf="@id/lblThisWeekText" />
+
+                <TextView
+                    android:id="@+id/lblThisWeekRuns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/lblThisWeekText" />
+
+                <TextView
+                    android:id="@+id/lblVO2MaxText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="VO2 Max:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblThisWeekText" />
+
+                <TextView
+                    android:id="@+id/lblVO2Max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="59"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat1"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat2"
+                    app:layout_constraintTop_toTopOf="@id/lblVO2MaxText" />
+
+                <TextView
+                    android:id="@+id/lblTrainingLoadText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Load:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblVO2MaxText" />
+
+                <TextView
+                    android:id="@+id/lblTrainingLoad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="714"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="@id/guidelineStat1"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineStat2"
+                    app:layout_constraintTop_toTopOf="@id/lblTrainingLoadText" />
+
+                <TextView
+                    android:id="@+id/lblOtherTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Other (30 days)"
+                    android:layout_marginTop="14dp"
+                    android:background="@color/header"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblTrainingLoadText" />
+
+                <TextView
+                    android:id="@+id/lblOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Other activities description"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblOtherTxt" />
+
+                <TextView
+                    android:id="@+id/lblStrengthTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Strength"
+                    android:layout_marginTop="14dp"
+                    android:background="@color/header"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblOther" />
+
+                <TextView
+                    android:id="@+id/lblStrength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Strength description"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/alike"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblStrengthTxt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</FrameLayout>

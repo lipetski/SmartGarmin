@@ -18,23 +18,23 @@
         android:id="@+id/lblActivityType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="0dp"
         android:fontFamily="@font/alike"
         android:text="run/intervals"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:textStyle="italic"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/imgActivityType"
         app:layout_constraintStart_toEndOf="@+id/imgActivityType"
-        app:layout_constraintTop_toTopOf="@+id/imgActivityType"
-        app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
+        app:layout_constraintTop_toTopOf="@+id/imgActivityType" />
 
     <ImageView
         android:id="@+id/imgActivityAltitude"
         android:layout_width="25dp"
         android:layout_height="15dp"
-        android:src="@drawable/floors"
-        android:layout_marginLeft="15dp"
-        app:layout_constraintStart_toEndOf="@id/lblActivityType"
+        android:src="@drawable/mountain"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintEnd_toStartOf="@id/lblActivityAltitude"
         app:layout_constraintTop_toTopOf="@+id/imgActivityType"
         app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
 
@@ -44,9 +44,10 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/alike"
         android:text="115m"
+        android:layout_marginRight="15dp"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imgActivityAltitude"
+        app:layout_constraintEnd_toStartOf="@+id/imgActivityHR"
         app:layout_constraintTop_toTopOf="@+id/imgActivityType"
         app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
 
@@ -55,8 +56,7 @@
         android:layout_width="25dp"
         android:layout_height="15dp"
         android:src="@drawable/heart"
-        android:layout_marginLeft="15dp"
-        app:layout_constraintStart_toEndOf="@id/lblActivityAltitude"
+        app:layout_constraintEnd_toStartOf="@id/lblActivityHR"
         app:layout_constraintTop_toTopOf="@+id/imgActivityType"
         app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
 
@@ -66,9 +66,10 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/alike"
         android:text="154"
+        android:layout_marginRight="15dp"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imgActivityHR"
+        app:layout_constraintEnd_toStartOf="@+id/lblActivityDistance"
         app:layout_constraintTop_toTopOf="@+id/imgActivityType"
         app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
 
@@ -80,8 +81,8 @@
         android:text="[15.5 km]"
         android:textColor="@color/black"
         android:textSize="16sp"
-        android:layout_marginLeft="15dp"
-        app:layout_constraintStart_toEndOf="@+id/lblActivityHR"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgActivityType"
         app:layout_constraintBottom_toBottomOf="@+id/imgActivityType" />
 
@@ -89,11 +90,12 @@
         android:id="@+id/lblActivityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:fontFamily="@font/courgette"
+        android:layout_marginLeft="50dp"
+        android:fontFamily="@font/alegreya_sc"
         android:text="10 * 2min@Z5 / 2min@Z1"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgActivityType" />
 
@@ -105,20 +107,20 @@
         android:fontFamily="@font/alike"
         android:text="[15.5 km | 0:20:00 | pace 3:38 | HR 162 | alt 1538 | 174 spm"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblActivityName" />
 
     <TextView
         android:id="@+id/lblActivityDescription"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:fontFamily="@font/alike"
+        android:fontFamily="@font/ibarra_real_nova"
         android:text="Description of this run"
         android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="italic"
-        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblActivityWork" />
 
